@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from os import listdir, path
+from os import listdir, path, makedirs
 from random import randint
 from time import time
 from sys import argv
@@ -117,6 +117,7 @@ else:
 		pixp = np.mean(p,axis=(0,1))
 		panels.append(p)
 		pixpanels.append(pixp)
+	makedirs(dirdat, exist_ok=True)
 	np.save(dirdat+"panels"+strparampan+".npy", panels)
 	np.save(dirdat+"pixpanels"+strparampan+".npy", pixpanels)
 

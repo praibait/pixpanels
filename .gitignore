@@ -1,5 +1,6 @@
 *.npy
 output/*
 panels/*
+data/*
 !output/main10_10_3_0.jpeg
 !panels/20180926_202826.jpg
